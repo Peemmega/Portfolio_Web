@@ -1,0 +1,130 @@
+h1 {
+    font-size: 30px;
+    color: white;
+    margin: 1% 1% -1% 1%;
+    padding: 1%;
+}
+
+legend {
+    font-size: 20px;
+    color: white;
+    margin: 1% 1% -1% 1%;
+    padding: 1%;
+}
+
+.Page {
+    font-size: 20px;
+    background-color: rgb(43, 44, 46);
+    margin: 5% 20% 5% 20%;
+    border-radius: 10px;
+}
+
+.gridConstainer {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    justify-content: center;
+    align-items: center;
+}
+
+div > div.gridConstainer {
+    padding: 1%;
+}
+
+.Post {
+    padding: 1%;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(23, 23, 23);
+    margin: 1%;
+    border-radius: 10px;
+}
+
+.Comment {
+    padding: 1%;
+    color: white;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    margin: 1%;
+    border-radius: 10px;
+    color: #141414;
+}
+
+.ButtomSize {
+    width: 45%;
+    height: 100%;
+    margin: 0% 0.5% 0% 0.5%;
+    border: white;
+    border-radius: 5px;
+}
+
+.TestFullSize {
+    width: 95%;
+    height: 100%;
+    margin: 0% 1% 0% 1%;
+}
+
+.FullSize ,.TextBox ,.Button {
+    width: 100%;
+}
+body {
+    /* background-color: rgb(130, 130, 130); */
+    min-height: 100vh;
+    background: #141414;
+    /* background: rgb(120,144,160);
+    background: linear-gradient(rgba(120,144,160,1), rgba(15,17,20,1)); */
+}  
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.bubbles {
+    position: fixed;
+    display: flex;
+    z-index: -100;
+}
+
+.bubbles span {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background: #ffffff;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 5px rgb(206, 206, 206),
+    0 0 50px #ffffff,
+    0 0 100px #ffffff;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(125s/ var(--i));
+}
+
+@keyframes animate{
+    0% {
+        transform: translateY(100vh) scale(0);
+    }
+    100% {
+        transform: translateY(-10) scale(1);
+    }
+}
+
+@media only screen and (max-width: 712px){
+    .Page {
+        margin: 5% 5% 5% 5%;
+    }
+
+    .TextBox {
+        grid-column: 1 /span 3;
+    }
+
+    .Button {
+        grid-column: 2 /span 1;
+    }
+
+    .gridConstainer {
+        grid-gap: 10 ;
+        grid-template-columns: 59.5% 40% 0.5%;
+    }
+}

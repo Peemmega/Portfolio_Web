@@ -1,0 +1,307 @@
+body {
+    background-color: #1b1b1b; /* Used if the image is unavailable */
+    height: 2000; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: fill; /* Resize the background image to cover the entire container */
+}
+
+div {
+    /* align-content: center; */
+    text-align: center;
+    
+}
+
+.mainPage {
+    display: grid;
+    grid-template-columns: 15% auto 15%;
+    align-content: center;
+    justify-content: center;
+}
+
+.header {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    display: grid;
+    grid-template-columns: 40% 10% auto;
+    grid-column: 1 / span 3;
+    background-color: #131212;
+    color: aliceblue;
+    font-size: 10px;
+    width: 100%;
+    align-content: center;
+}
+
+.pageName {
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.bg {
+    position: fixed; 
+    top: 50px; 
+    left: 0;
+    z-index: -1;
+}
+
+.topMenu a:hover {
+    color: black;
+    background: #ddd;
+}
+
+.topMenu a:active {
+    color: rgb(255, 255, 255);
+    background: #323232;
+}
+
+.topMenu {
+    background-color: #1b1b1b00;
+    display: grid;
+    grid-column: 3 / span 1;
+    grid-template-columns: auto auto auto;
+    grid-gap: 0.5%;
+}
+
+.lobby {
+    position: fixed; 
+    color: aliceblue;
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 28px;
+    text-shadow: 2px 2px 8px #000000;
+    align-content: center;
+    justify-content: center;
+}
+
+.lobby h1 {
+    font-size: 60px;
+    margin: -1%;
+}
+
+.aboutme {
+    color: aliceblue;
+    background-color: #000000d0;
+    top: 0; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    grid-column: 2 / span 1;
+
+    font-size: 28px;
+    text-shadow: 2px 2px 8px #000000;
+    margin: 10% 0px 0px 0px;
+    justify-content: center;
+}
+
+.aboutme h2, .aboutme h1 {
+    margin: 1.5%;
+}
+
+.aboutme hr {
+    height: 0; 
+    border: 0; 
+    border-top: 1px solid #888888;
+    margin: 1%;
+}
+
+.aboutme p {
+    font-size: 20px;
+}
+
+.aboutme h2 {
+    font-size: 40px;
+}
+
+.menuGrid {
+    text-shadow: none;
+    display: grid;
+    grid-column: 3 / span 1;
+    grid-template-columns: 30% 30% 30%;
+    margin: 0 10% 0 10%;
+    justify-content: center;
+    align-content: center;
+}
+
+a {
+    text-decoration:none;
+}
+
+.buttonText {
+    padding: 20px 15px;
+    align-content: center;
+    border: none;
+    color: aliceblue;
+    font-size: 18px;
+    text-shadow: none;
+}
+
+.menuGrid .buttonText {
+    border-style: solid;
+    border-color: #ddd;
+    background: #0000007d;
+    font-size: 1em;
+    width: 90%;
+    height: 60%;
+    align-content: center;
+    padding: 6px 0px;
+    border-radius: 5px;
+}
+
+.menuGrid .buttonText:hover, .pageName .buttonText:hover {
+    color: black;
+    background: #ddd;
+}
+
+.menuGrid .buttonText:active {
+    color: rgb(255, 255, 255);
+    background: #323232;
+}
+
+a:link ,a:visited, a:active {
+    color: white;
+}
+
+
+.profile {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.grid {
+    display: grid;
+    margin: 0 0 0 5% ;
+}
+
+.profileInfo {
+    display: grid;
+    grid-column: 2 / span 1;
+    grid-template-columns: auto 70%;
+    padding: 1% 0 1% 2.5% ;
+}
+
+.contactElement {
+    background-color: #3b3b3b80;
+    grid-template-columns: auto 85%;
+    border-radius: 2%;
+    margin: 1%;
+    padding: 1%;
+    grid-gap: 5%;
+}
+.profileInfo div {
+    text-align: left;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.anime_visual{
+    width: 100%;
+}
+
+.icon {
+    width: 100%;
+}
+video {
+    width: 100%;
+}
+
+.aboutme p {
+    font-size: 20px;
+}
+
+.aboutme h2 {
+    font-size: 30px;
+}
+
+.joinbutton {
+    padding: 6px 20px;
+}
+
+.description {
+    margin: 0 5% 0 5% ;
+}
+
+@media only screen and (max-width: 900px) {
+    .mainPage {
+        grid-template-columns: 5% auto 5%;
+    }
+
+    .header {
+        grid-template-columns: 40% 0% auto;
+    }
+
+    .lobby {
+        font-size: 22px;
+        
+    }
+    .lobby h1 {
+        font-size: 40px;
+    }
+
+    .menuGrid .buttonText {
+        font-size: 16px;
+    }
+
+    .aboutme {
+        margin: 15% 0 0 0;
+    }
+
+    .aboutme p {
+        font-size: 16px;
+    }
+    
+    .aboutme h2 {
+        font-size: 26px;
+    }
+
+}
+/* Mobile */
+@media only screen and (max-width: 600px) {
+    .mainPage {
+        grid-template-columns: 5% auto 5%;
+    }
+
+    .pageName {
+        grid-column: 1 / 3 span;
+        width: 100%;
+        margin: 0;
+    }
+    .topMenu {
+        grid-column: 1 / 3 span;
+        width: 100%;
+    }
+
+    .lobby {
+        font-size: 20px;
+        width: 100%;    
+    }
+    .lobby h1 {
+        font-size: 35px;
+    }
+
+    .menuGrid .buttonText {
+        font-size: 16px;
+    }
+
+    .aboutme {
+        margin: 20% 0 0 0;
+    }
+
+    .aboutme p {
+        font-size: 14px;
+    }
+    
+    .aboutme h2 {
+        font-size: 20px;
+    }
+
+    .header {
+        padding: 2% 0 0 0;
+    }
+    
+}

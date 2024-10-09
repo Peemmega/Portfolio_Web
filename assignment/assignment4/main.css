@@ -1,0 +1,164 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: 20% auto auto;
+}
+
+.grid-container > div{
+    background-color: rgb(255, 247, 171);
+    justify-content: center;
+    border: 3px solid rgb(126, 8, 8);
+	padding: 3%;
+}
+
+/* .grid-container > div > div{
+	background-color: rgb(171, 255, 237);
+} */
+
+div {
+	text-align: center;
+}
+
+ul > li {
+	text-align: left;
+	font-size: 20px;
+}
+
+#main1{
+	grid-column: 1/ span 1;
+	
+}
+
+#main2{
+	grid-column: 2/ span 1;
+}
+
+#main3{
+	grid-column: 3/ span 1;
+}
+
+h1 {
+	font-size: 70px;
+}
+
+h2 {
+	font-size: 40px;
+}
+#instructions{
+	grid-column: 1/ span 3;
+	padding: 1%;
+}
+
+/* #instructions > div {
+	background-color: rgb(177, 44, 44);
+} */
+
+.instructionsList, .instructionsList > div, #header {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+}
+
+#header{
+	grid-column: 1/ span 3;
+    /* padding: 0% 10% 5% 10%; */
+	background-color: rgb(177, 44, 44);
+	color: rgb(255, 212, 118);
+	justify-content: left;
+	padding: 1%;
+}
+
+#header > div {
+	text-align: left;
+	padding: 1%;
+}
+
+.instructionsList > div {
+	width: 40%;
+	margin: 0.5%;
+	padding: 0.5%;
+	border: 3px solid rgb(126, 8, 8);
+	border-style: dashed;
+	background-color: rgb(255, 249, 198);
+	font-size: 20px;
+}
+
+.instructionsScale {
+	width: 30%;
+}
+
+.instructionsDescription {
+	width: 60%;
+	padding: 5%;
+}
+#footer{
+	grid-column: 1/ span 3;
+	padding: 1%;
+}
+
+#Icon {
+	width: 20%;
+}
+
+#HeaderText {
+	width: 70%;
+}
+.IconSize {
+	width: 50%;
+}
+
+.ingreSize {
+	width: 50%;
+}
+
+
+@media only screen and (max-width: 768px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: 50% 50%;
+	}
+
+	#main2{
+		grid-column: 1/ span 1;
+	}
+	#main3{
+		grid-column: 2/ span 1;
+	}
+
+	#main1, #header, #footer {
+		grid-column: 1/ span 2;
+	}
+
+	
+
+	
+
+	.instructionsList > div {
+		width: 100%;
+		margin: 0.5%;
+		padding: 0.5%;
+		border: 3px solid rgb(126, 8, 8);
+		border-style: dashed;
+		background-color: rgb(255, 249, 198);
+		font-size: 20px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: 20% auto auto;
+	}
+	#main1, #main2, #main3, #header, #footer{
+		grid-column: 1/ span 3;
+	}
+	
+	.instructionsList > div {
+		width: 100%;
+		margin: 0.5%;
+		padding: 0.5%;
+		border: 3px solid rgb(126, 8, 8);
+		border-style: dashed;
+		background-color: rgb(255, 249, 198);
+		font-size: 20px;
+	}
+}
